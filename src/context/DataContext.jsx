@@ -42,7 +42,9 @@ export default function DataContextProvider(props) {
 
   useEffect(() => {
     fetchHelperFunction(missionsURL);
+    fetchHelperFunction(launchesURL);
     fetchHelperFunction(rocketsURL);
+    fetchHelperFunction(launchpadsURL);
   }, []);
 
   return (
