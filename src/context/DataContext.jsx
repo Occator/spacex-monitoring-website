@@ -3,12 +3,10 @@ import { createContext, useEffect, useState } from "react";
 export const DataContext = createContext();
 
 export default function DataContextProvider(props) {
-  const [missionsDataContext, setMissionsDataContext] = useState([]);
   const [launchesDataContext, setLaunchesDataContext] = useState([]);
   const [rocketsDataContext, setRocketsDataContext] = useState([]);
   const [launchpadsDataContext, setLaunchpadsDataContext] = useState([]);
 
-  const missionsURL = "https://api.spacexdata.com/v4/history";
   const launchesURL = "https://api.spacexdata.com/v5/launches";
   const rocketsURL = "https://api.spacexdata.com/v4/rockets";
   const launchpadsURL = "https://api.spacexdata.com/v4/launchpads";
@@ -20,9 +18,6 @@ export default function DataContextProvider(props) {
       });
       const data = await res.json();
       switch (url) {
-        case missionsURL:
-          setMissionsDataContext(data);
-          break;
         case launchesURL:
           setLaunchesDataContext(data);
           break;
@@ -41,7 +36,6 @@ export default function DataContextProvider(props) {
   };
 
   useEffect(() => {
-    fetchHelperFunction(missionsURL);
     fetchHelperFunction(launchesURL);
     fetchHelperFunction(rocketsURL);
     fetchHelperFunction(launchpadsURL);
@@ -50,7 +44,6 @@ export default function DataContextProvider(props) {
   return (
     <DataContext.Provider
       value={{
-        missionsDataContext,
         launchesDataContext,
         rocketsDataContext,
         launchpadsDataContext,
