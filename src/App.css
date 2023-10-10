@@ -154,7 +154,7 @@ Card
 }
 
 .card__image {
-  margin: 2rem 1rem;
+  margin: 2.5rem 1rem;
   position: relative;
 }
 
@@ -227,6 +227,26 @@ h2 {
 .date__icon,
 .address__icon {
   width: 30px;
+}
+
+/* ### Card Detail Hover ### */
+
+.details__header {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.launchpad__detail__status {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  background-color: whitesmoke;
+}
+
+.details__content {
+  padding-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /* ============================================================
