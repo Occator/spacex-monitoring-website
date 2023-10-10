@@ -17,6 +17,8 @@ export default function Card({
     month: "short",
     day: "numeric",
   });
+
+  console.log("launchPadInfo", launchPadInfo);
   return (
     <div className="card">
       <div className="card__image">
@@ -25,9 +27,25 @@ export default function Card({
       </div>
       <div className="card__content">
         {missionDetail === null ? (
-          <p className="mission__details">No details available</p>
+          <div className="mission__details">
+            <p className="details__header">Launch Details</p>
+            <p className="details__content">No details available</p>
+            <p className="details__header">{launchPadInfo[0].full_name}</p>
+            <p className="launchpad__detail__status">
+              {launchPadInfo[0].status}
+            </p>
+            <p className="details__content">{launchPadInfo[0].details}</p>
+          </div>
         ) : (
-          <p className="mission__details">{missionDetail}</p>
+          <div className="mission__details">
+            <p className="details__header">Launch Details</p>
+            <p className="details__content">{missionDetail}</p>
+            <p className="details__header">{launchPadInfo[0].full_name}</p>
+            <p className="launchpad__detail__status">
+              {launchPadInfo[0].status}
+            </p>
+            <p className="details__content">{launchPadInfo[0].details}</p>
+          </div>
         )}
         <span className="status upcoming">upcoming</span>
         <div className="launch__details">
