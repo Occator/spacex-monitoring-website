@@ -103,10 +103,140 @@ nav {
   padding: 0;
 }
 
+/* ====================
+CardsGrid
+==================== */
+
+.cards__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/* ====================
+Card
+==================== */
+
+/* ### Card Container ### */
+
+.card {
+  position: relative;
+  transition: 0.3s;
+  max-width: 400px;
+  min-width: 300px;
+  background: #fff;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.card:hover .mission__details {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.mission__details {
+  display: block;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 3rem 8%;
+  background-color: #fff;
+  overflow-y: scroll;
+  transition: 0.8s ease;
+}
+
+.card__image {
+  margin: 2rem 1rem;
+  position: relative;
+}
+
+img {
+  opacity: 0.8;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.status.success {
+  background-color: green;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0 6px 0 6px;
+}
+.status.failed {
+  background-color: red;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0 6px 0 6px;
+}
+.status.upcoming {
+  background-color: blue;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0 6px 0 6px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-top: 0.5rem;
+}
+
+.launch__details {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+.date,
+.address {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.address {
+  margin-bottom: 2rem;
+}
+
+.date__icon,
+.address__icon {
+  width: 30px;
+}
+
 /* ============================================================
 Landing Page / Successful launches / failed Launches
 ============================================================ */
 
 /* ====================
 Rockets detail page
+==================== */
+
+/* ====================
+Media Queries
 ==================== */
