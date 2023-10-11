@@ -1,14 +1,17 @@
 import "./App.css";
-import CardsGrid from "./components/CardsGrid";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/NavBar/Header";
+import LandingPage from "./components/LandingPage";
 import RocketDetailPage from "./components/RocketDetailPage";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <CardsGrid />
-      {/* <RocketDetailPage /> */}
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/:id" element={<RocketDetailPage />} />
+      </Routes>
     </div>
   );
 }

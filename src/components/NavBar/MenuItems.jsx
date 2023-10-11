@@ -1,5 +1,6 @@
 import "../../App.css";
 import { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
 export default function MenuItems(props) {
@@ -42,7 +43,7 @@ export default function MenuItems(props) {
             <Dropdown submenus={items.submenu} dropdown={dropdown} />
           </>
         ) : (
-          <a href={items.url}>{items.title}</a>
+          <NavLink href={items.url}>{items.title}</NavLink>
         )}
       </li>
     </>
