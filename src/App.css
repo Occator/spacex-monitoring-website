@@ -158,7 +158,7 @@ Card
   position: relative;
 }
 
-img {
+.card__image > img {
   opacity: 0.8;
   width: 100%;
   border-radius: 6px;
@@ -277,8 +277,7 @@ Rockets detail page
   justify-content: space-between;
 }
 
-.rocket__img,
-img {
+.rocket__img > img {
   width: 500px;
 }
 
