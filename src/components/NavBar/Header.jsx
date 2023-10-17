@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header>
       <div className="nav-area">
-        <NavLink href="/" className="logo">
+        <NavLink to="/" className="logo">
           SpaceX Monitoring
         </NavLink>
         <Navbar />

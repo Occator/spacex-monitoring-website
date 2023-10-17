@@ -272,6 +272,7 @@ Rockets detail page
   justify-content: space-around;
 }
 .rocket__content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

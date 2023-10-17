@@ -3,6 +3,7 @@ import DateIcon from "../components/ui/icons/date-icon";
 import AddressIcon from "../components/ui/icons/address-icon";
 
 export default function Card({
+  launches,
   title,
   missionDetail,
   image,
@@ -10,6 +11,7 @@ export default function Card({
   rocketsInfo,
   launchPadInfo,
   launchDate,
+  launchStatus,
 }) {
   const formattedLaunchDate = new Date(launchDate).toLocaleDateString("en-us", {
     weekday: "long",
@@ -18,7 +20,6 @@ export default function Card({
     day: "numeric",
   });
 
-  console.log("launchPadInfo", launchPadInfo);
   return (
     <div className="card">
       <div className="card__image">
@@ -47,7 +48,7 @@ export default function Card({
             <p className="details__content">{launchPadInfo[0].details}</p>
           </div>
         )}
-        <span className="status upcoming">upcoming</span>
+        <span className={`status ${launchStatus}`}>{launchStatus}</span>
         <div className="launch__details">
           <div className="flight__info">
             <p>{`Flight number: ${flightNumber}`}</p>

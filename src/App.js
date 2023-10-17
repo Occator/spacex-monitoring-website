@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/NavBar/Header";
 import LandingPage from "./components/LandingPage";
 import RocketDetailPage from "./components/RocketDetailPage";
+import FilteredLaunches from "./components/FilteredLaunches";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/:id" element={<RocketDetailPage />} />
+        <Route path="/rockets/:id" element={<RocketDetailPage />} />
+        <Route path="/launches/:status" element={<FilteredLaunches />} />
       </Routes>
     </div>
   );
