@@ -7,7 +7,6 @@ export default function RocketDetailPage() {
   const { rocketsDataContext } = useContext(DataContext);
   const params = useParams();
   const rocket = rocketsDataContext?.find((rocket) => rocket.id === params.id);
-  console.log("rocketParams", rocket);
   return (
     <div className="rocket">
       <div className="rocket__container">

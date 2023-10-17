@@ -8,8 +8,6 @@ export default function MenuItems(props) {
   const { items } = props;
   let toggleDropdownRef = useRef();
 
-  console.log("MenuItems items.url", items.url);
-
   useEffect(() => {
     const toggleDropdownHandler = (event) => {
       if (
