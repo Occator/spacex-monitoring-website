@@ -8,6 +8,8 @@ export default function MenuItems(props) {
   const { items } = props;
   let toggleDropdownRef = useRef();
 
+  console.log("MenuItems items.url", items.url);
+
   useEffect(() => {
     const toggleDropdownHandler = (event) => {
       if (
@@ -40,10 +42,14 @@ export default function MenuItems(props) {
             >
               {items.title}{" "}
             </button>
-            <Dropdown submenus={items.submenu} dropdown={dropdown} />
+            <Dropdown
+              items={items}
+              submenus={items.submenu}
+              dropdown={dropdown}
+            />
           </>
         ) : (
-          <NavLink href={items.url}>{items.title}</NavLink>
+          <NavLink to={items.url}>{items.title}</NavLink>
         )}
       </li>
     </>

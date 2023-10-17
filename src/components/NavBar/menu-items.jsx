@@ -37,7 +37,7 @@ export const menuItems = [
       },
       {
         title: "upcoming",
-        url: "/",
+        url: "upcoming",
       },
     ],
   },
